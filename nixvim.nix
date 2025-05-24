@@ -20,6 +20,7 @@
     ./plugins/todo-comments.nix
     ./plugins/mini.nix
     ./plugins/treesitter.nix
+    ./plugins/neogit.nix
 
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #
@@ -30,7 +31,7 @@
     # ./plugins/kickstart/plugins/indent-blankline.nix
     # ./plugins/kickstart/plugins/lint.nix
     # ./plugins/kickstart/plugins/autopairs.nix
-    # ./plugins/kickstart/plugins/neo-tree.nix
+    ./plugins/kickstart/plugins/neo-tree.nix
     #
     # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
     # Add your plugins to ./plugins/custom/plugins and import them below
@@ -140,6 +141,8 @@
       # See `:help mapleader`
       mapleader = " ";
       maplocalleader = " ";
+      loaded_netrw = 1;
+      loaded_netrwPlugin = 1;
 
       # Set to true if you have a Nerd Font installed and selected in the terminal
       have_nerd_font = false;
@@ -163,6 +166,12 @@
     #  For more options, you can see `:help option-list`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#opts
     opts = {
+      # change tab into space
+      tabstop = 2;
+      shiftwidth = 2;
+      expandtab = true;
+      autoindent = true;
+
       # Show line numbers
       number = true;
       # You can also add relative line numbers, to help with jumping.

@@ -75,9 +75,9 @@
         # gopls = {
         #   enable = true;
         # };
-        # pyright = {
-        #   enable = true;
-        # };
+        pyright = {
+          enable = true;
+        };
         # rust_analyzer = {
         #   enable = true;
         # };
