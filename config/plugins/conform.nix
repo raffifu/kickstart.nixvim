@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  programs.nixvim = {
     # Dependencies
     #
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extrapackages
@@ -53,5 +52,4 @@
         };
       }
     ];
-  };
 }

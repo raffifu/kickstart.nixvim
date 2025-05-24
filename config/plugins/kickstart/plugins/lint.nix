@@ -1,5 +1,4 @@
 {
-  programs.nixvim = {
     # Linting
     # https://nix-community.github.io/nixvim/plugins/lint/index.html
     plugins.lint = {
@@ -46,5 +45,4 @@
         clear = true;
       };
     };
-  };
 }

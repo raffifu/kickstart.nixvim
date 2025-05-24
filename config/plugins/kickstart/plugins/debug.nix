@@ -1,5 +1,4 @@
 {
-  programs.nixvim = {
     # Shows how to use the DAP plugin to debug your code.
     #
     # Primarily focused on configuring the debugger for Go, but can
@@ -142,5 +141,4 @@
       require('dap').listeners.before.event_terminated['dapui_config'] = require('dapui').close
       require('dap').listeners.before.event_exited['dapui_config'] = require('dapui').close
     '';
-  };
 }

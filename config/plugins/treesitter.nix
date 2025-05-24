@@ -1,5 +1,4 @@
 {
-  programs.nixvim = {
     # Highlight, edit, and navigate code
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html
     plugins.treesitter = {
@@ -43,5 +42,4 @@
         #    - Treesitter + textobjects: https://nix-community.github.io/nixvim/plugins/treesitter-textobjects/index.html
       };
     };
-  };
 }
