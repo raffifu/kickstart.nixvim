@@ -29,7 +29,7 @@ in
     # ./config/plugins/kickstart/indent-blankline.nix
     # ./config/plugins/kickstart/lint.nix
     # ./config/plugins/kickstart/autopairs.nix
-    # ./config/plugins/kickstart/neo-tree.nix
+    ./config/plugins/kickstart/neo-tree.nix
     #
     # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
     # Add your plugins to ./config/plugins/custom and import them below
@@ -141,6 +141,9 @@ in
     # See `:help mapleader`
     mapleader = " ";
     maplocalleader = " ";
+
+    loaded_netrw = 1;
+    loaded_netrwPlugin = 1;
 
     # Set to true if you have a Nerd Font installed and selected in the terminal
     have_nerd_font = enable_nerd_fonts;
