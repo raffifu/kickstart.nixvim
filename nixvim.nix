@@ -5,7 +5,7 @@
   ...
 }:
 let
-  enable_nerd_fonts = false;
+  enable_nerd_fonts = true;
 in
 {
   imports = [
@@ -29,10 +29,11 @@ in
     # ./config/plugins/kickstart/indent-blankline.nix
     # ./config/plugins/kickstart/lint.nix
     # ./config/plugins/kickstart/autopairs.nix
-    # ./config/plugins/kickstart/neo-tree.nix
+    ./config/plugins/kickstart/neo-tree.nix
     #
     # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
     # Add your plugins to ./config/plugins/custom and import them below
+    ./config/plugins/custom/opencode.nix
   ];
 
   /*
@@ -141,6 +142,9 @@ in
     # See `:help mapleader`
     mapleader = " ";
     maplocalleader = " ";
+
+    loaded_netrw = 1;
+    loaded_netrwPlugin = 1;
 
     # Set to true if you have a Nerd Font installed and selected in the terminal
     have_nerd_font = enable_nerd_fonts;
@@ -344,7 +348,7 @@ in
         source = "if_many";
       };
       underline = {
-        severity.__raw = ''vim.diagnostic.severity.ERROR'';
+        severity.__raw = "vim.diagnostic.severity.ERROR";
       };
       signs.__raw = ''
         vim.g.have_nerd_font and {

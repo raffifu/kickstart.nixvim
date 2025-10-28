@@ -70,12 +70,12 @@
       # clangd = {
       #   enable = true;
       # };
-      # gopls = {
-      #   enable = true;
-      # };
-      # pyright = {
-      #   enable = true;
-      # };
+      gopls = {
+        enable = true;
+      };
+      pyright = {
+        enable = true;
+      };
       # rust_analyzer = {
       #   enable = true;
       # };
