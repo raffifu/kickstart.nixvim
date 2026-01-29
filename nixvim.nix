@@ -5,7 +5,7 @@
   ...
 }:
 let
-  enable_nerd_fonts = false;
+  enable_nerd_fonts = true;
 in
 {
   imports = [
@@ -347,7 +347,7 @@ in
         source = "if_many";
       };
       underline = {
-        severity.__raw = ''vim.diagnostic.severity.ERROR'';
+        severity.__raw = "vim.diagnostic.severity.ERROR";
       };
       signs.__raw = ''
         vim.g.have_nerd_font and {

@@ -6,6 +6,7 @@
   extraPackages = with pkgs; [
     # Used to format Lua code
     stylua
+    ruff
   ];
 
   # Autoformat
@@ -33,7 +34,9 @@
       formatters_by_ft = {
         lua = [ "stylua" ];
         # Conform can also run multiple formatters sequentially
-        # python = [ "isort "black" ];
+        python = [
+          "ruff"
+        ];
         #
         # You can use 'stop_after_first' to run the first available formatter from this list
         #javascript = {
