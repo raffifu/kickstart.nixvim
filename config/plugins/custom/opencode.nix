@@ -20,12 +20,16 @@
     settings = {
       input.enabled = true;
       auto_reload = true;
-      provider = {
-        enabled = "snacks";
+      ask = {
         snacks = {
           win = {
             enter = true;
           };
+        };
+      };
+      select = {
+        snacks = {
+          preview = "preview";
         };
       };
     };
