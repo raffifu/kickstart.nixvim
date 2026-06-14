@@ -75,6 +75,10 @@
         enable = true;
       };
 
+      tofu_ls = {
+        enable = true;
+      };
+
       gopls = {
         enable = true;
       };
