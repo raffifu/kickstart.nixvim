@@ -9,6 +9,13 @@
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html#installing-tree-sitter-grammars-from-nixpkgs
     grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
 
+    indent = {
+      enable = true;
+      disable = [
+        "ruby"
+      ];
+    };
+
     settings = {
       # Installing tree-sitter grammars from nvim-treesitter
       # (can be combined with grammarPackages from Nixpkgs)
@@ -21,13 +28,6 @@
 
         # Some languages depend on vim's regex highlighting system for indent rules.
         additional_vim_regex_highlighting = [
-          "ruby"
-        ];
-      };
-
-      indent = {
-        enable = true;
-        disable = [
           "ruby"
         ];
       };

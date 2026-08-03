@@ -1,4 +1,7 @@
-{
+{...}: let
+  opencodeCmd = "opencode --port";
+  snacksTerminalOpts = "{ win = { position = 'right', enter = false } }";
+in {
   # opencode.nvim configuration using the custom module
   # This enables plugins.opencode.enable support
   #
@@ -20,6 +23,11 @@
     settings = {
       input.enabled = true;
       auto_reload = true;
+      server.start.__raw = ''
+        function()
+          require('snacks.terminal').open('${opencodeCmd}', ${snacksTerminalOpts})
+        end
+      '';
       ask = {
         snacks = {
           win = {
@@ -69,7 +77,7 @@
         "t"
       ];
       key = "<C-.>";
-      action.__raw = ''function() require("opencode").toggle() end'';
+      action.__raw = ''function() require("snacks.terminal").toggle('${opencodeCmd}', ${snacksTerminalOpts}) end'';
       options = {
         desc = "Toggle opencode";
       };
